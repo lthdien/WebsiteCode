@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Restaurant</title>
+
+  <!-- Liên kết file CSS và JavaScript -->
+  <link rel="stylesheet" href="style.css">
+  <script src="cart.js" defer></script>
+</head>
+
+<body>
+  <!-- PHẦN ĐẦU TRANG -->
+  <header>
+    <h1>My Restaurant</h1>
+
+    <!-- Biểu tượng giỏ hàng -->
+    <div class="icon-cart">
+      <svg width="50" height="50" viewBox="0 0 24 24" fill="none">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312" />
+      </svg>
+      <span id="cart-count">0</span>
+    </div>
+  </header>
+
+  <!-- PHẦN CHÍNH -->
+  <main class="container">
+
+    <!-- DANH SÁCH SẢN PHẨM -->
+    <section class="product-list">
+      <div class="product">
+        <h2>Trái cây tươi</h2>
+        <img src="https://tamfruit.vn/wp-content/uploads/2024/12/gio-hoa-qua.jpg" alt="Trái cây tươi">
+        <p class="price" data-price="120000">120.000đ</p>
+        <button class="add-to-cart">Mua</button>
+      </div>
+
+      <div class="product">
+        <h2>Xôi lá cẩm</h2>
+        <img src="https://statics.vinwonders.com/xoi-la-cam-01_1631896439.jpg" alt="Xôi lá cẩm">
+        <p class="price" data-price="35000">35.000đ</p>
+        <button class="add-to-cart">Mua</button>
+      </div>
+
+      <div class="product">
+        <h2>Xiên nướng</h2>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgPnH1D0gGwp37g7js8N0lW2z07-DaqqM57fwd0grsp9iDpyJwy0OH_Us&s=10" alt="Xiên nướng">
+        <p class="price" data-price="25000">25.000đ</p>
+        <button class="add-to-cart">Mua</button>
+      </div>
+    </section>
+
+    <!-- GIỎ HÀNG -->
+    <section class="cart">
+      <h2>🛒 Giỏ hàng</h2>
+
+      <table class="cart-table">
+        <thead>
+          <tr>
+            <th>Hình ảnh</th>
+            <th>Tên & Đơn giá</th>
+            <th>Số lượng</th>
+            <th>Thành tiền</th>
+          </tr>
+        </thead>
+        <tbody id="cart-body"></tbody>
+      </table>
+
+      <!-- PHẦN TỔNG VÀ THANH TOÁN -->
+      <div class="cart-footer">
+         <button id="checkout-btn" disabled>Thanh toán</button>
+        <p class="total">Tổng cộng: <span id="total">0</span> đ</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- POPUP CẢM ƠN -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <h3>Cảm ơn bạn đã mua hàng!</h3>
+      <p>Đơn hàng của bạn đang được xử lý. 🍀</p>
+      <button id="close-popup">Đóng</button>
+    </div>
+  </div>
+
+  <!-- CHÂN TRANG -->
+  <footer>
+    <p>Designed by ThanhDien</p>
+  </footer>
+</body>
+</html>
